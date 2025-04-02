@@ -88,6 +88,18 @@ nav a {
     margin: 4px;
 }
 
+nav.open .menu-icon div:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+nav.open .menu-icon div:nth-child(2) {
+    opacity: 0;
+}
+
+nav.open .menu-icon div:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
 .hero {
     padding: 40px 20px;
 }
@@ -176,5 +188,6 @@ nav a {
 
     nav.open ul {
         display: flex;
+        opacity: 1;
     }
 }
