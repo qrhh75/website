@@ -15,6 +15,11 @@
     <header class="header">
         <nav class="navbar" aria-label="Main Navigation">
             <div class="logo">PSG News</div>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
             <ul class="nav-links">
                 <li><a href="#home" class="nav-button">Accueil</a></li>
                 <li><a href="#news" class="nav-button">Actualités</a></li>
@@ -22,11 +27,11 @@
                 <li><a href="#contact" class="nav-button">Contact</a></li>
             </ul>
         </nav>
-         <script>
-        function toggleMenu() {
-            document.querySelector("nav").classList.toggle("open");
-        }
-    </script>
+        <script>
+            function toggleMenu() {
+                document.querySelector(".nav-links").classList.toggle("open");
+            }
+        </script>
         <div class="hero">
             <h1>Votre Source d'Actualités PSG</h1>
             <p>Restez informé des dernières nouvelles et résultats du PSG.</p>
