@@ -50,56 +50,6 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    padding: 1rem;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav li {
-    margin-left: 1rem;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem;
-}
-
-.menu-icon {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.menu-icon div {
-    width: 25px;
-    height: 3px;
-    background-color: white;
-    margin: 4px;
-}
-
-nav.open .menu-icon div:nth-child(1) {
-    transform: translateY(8px) rotate(45deg);
-}
-
-nav.open .menu-icon div:nth-child(2) {
-    opacity: 0;
-}
-
-nav.open .menu-icon div:nth-child(3) {
-    transform: translateY(-8px) rotate(-45deg);
-}
-
 .hero {
     padding: 40px 20px;
 }
@@ -165,6 +115,101 @@ nav.open .menu-icon div:nth-child(3) {
     transform: scale(1.2);
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: transparent; 
+    padding: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin-left: 1rem;
+}
+
+nav a {
+    color: #333; 
+    text-decoration: none;
+    padding: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #555;
+}
+
+
+.menu-icon {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-icon div {
+    width: 25px;
+    height: 3px;
+    background-color: #333; 
+    margin: 4px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+nav.open .menu-icon div:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+nav.open .menu-icon div:nth-child(2) {
+    opacity: 0;
+}
+
+nav.open .menu-icon div:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    nav {
+        background-color: #333; 
+    }
+
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        display: none;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+
+    nav li {
+        margin: 0;
+        text-align: center;
+        border-top: 1px solid #444;
+    }
+
+    nav a {
+        color: white; 
+    }
+
+    .menu-icon {
+        display: flex;
+    }
+
+    nav.open ul {
+        display: flex;
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
@@ -188,6 +233,5 @@ nav.open .menu-icon div:nth-child(3) {
 
     nav.open ul {
         display: flex;
-        opacity: 1;
     }
 }
