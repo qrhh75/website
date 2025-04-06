@@ -55,7 +55,6 @@ body {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* Hamburger menu styles */
 .menu-icon {
     display: none;
     flex-direction: column;
@@ -72,7 +71,7 @@ body {
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Animation for menu icon */
+
 .nav-links.open .menu-icon div:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -85,7 +84,7 @@ body {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* Media query for mobile devices */
+
 @media (max-width: 768px) {
     .nav-links {
         flex-direction: column;
